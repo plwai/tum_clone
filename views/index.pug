@@ -1,5 +1,19 @@
-extends layout
+head
+  script(src='es6-shim/es6-shim.min.js')
+  script(src='angular2/bundles/angular2-polyfills.js')
+  script(src='systemjs/dist/system-polyfills.js')
+  script(src='systemjs/dist/system.src.js')
+  script(src='typescript/lib/typescript.js')
+  script(src='angular2/bundles/angular2.dev.js')
+  script(src='rxjs/bundles/Rx.js')
+
+  script.
+    System.config({
+      transpiler: 'typescript',
+      typescriptOptions: { emitDecoratorMetadata: true }
+    });
+    System.import('user-app/main.ts');
+
 
 block content
-  h1= title
-  p Welcome to #{title}
+  my-app loading
