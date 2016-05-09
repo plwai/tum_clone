@@ -8,8 +8,16 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var config = require('./config')();
+var db = require('./models/base.js');
 
 var app = express();
+
+// db setup
+db.setDB("asdasd");
+app.set('db', db);
+
+// to get db
+//console.log((req.app.get('db').getDB()));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
