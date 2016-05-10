@@ -83,5 +83,28 @@ export class ScrollComponent{
     }
   }
 
+  @HostListener('window:keydown', ['$event'])
+  keyTrack(event) {
+    if(this.time && document.activeElement.tagName == "BODY"){
+      this.time = false;
+      setTimeout(() => this.tickerFunc(), 1200);
 
+      if(event.keyCode == 40 && this.count != this.MAX_COUNT){
+        // mousewheel scroll down
+        document.getElementsByClassName('active')[0].className = this.setOldSec();
+        this.count++;
+        document.getElementsByClassName('showcase')[this.count].className = this.setActive();
+
+      }
+      else if(event.keyCode == 38 && this.count > 0){
+        // mousewheel scroll up
+        document.getElementsByClassName('active')[0].className = this.setNormal();
+        this.count--;
+        document.getElementsByClassName('showcase')[this.count].className = this.setActive();
+      }
+    }
+    else{
+      return;
+    }
+  }
 }

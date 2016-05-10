@@ -12,4 +12,5 @@ import {ScrollComponent} from 'user-app/component/scroll.component.ts';
 })
 
 export class AppComponent{
+
 }
