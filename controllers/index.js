@@ -5,8 +5,8 @@ module.exports = {
     run: function(req, res, next) {
       var view = new View(res, 'index');
         view.render({
-            title: 'Administration',
-            content: 'Welcome to the control panel'
+            title: 'Welcome Page',
+            content: 'Welcome'
         });
     }
 }

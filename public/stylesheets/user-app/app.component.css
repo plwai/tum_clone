@@ -1,0 +1,18 @@
+.showcase{
+  height: 100%;
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  animation: aboutTumblrIntro .7s ease-out .5s;
+  animation-fill-mode: backwards;
+}
+
+.login-section{
+  z-index: 6;
+  background-color: grey;
+}
+
+.btn-size{
+  width: 298px;
+  height: 32px;
+}
