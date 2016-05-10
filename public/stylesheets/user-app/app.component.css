@@ -12,7 +12,19 @@
   background-color: grey;
 }
 
+.vertical-center{
+  position: relative;
+  top: 25%;
+  transform: translateY(-100%);
+}
+
+.old-sec{
+  display: none;
+}
+
 .btn-size{
   width: 298px;
   height: 32px;
+  margin-top: 10px;
+  margin-bottom:10px;
 }
