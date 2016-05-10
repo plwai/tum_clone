@@ -3,8 +3,7 @@
   width: 100%;
   color: white;
   overflow: hidden;
-  animation: aboutTumblrIntro .7s ease-out .5s;
-  animation-fill-mode: backwards;
+  transition: 2s;
 }
 
 .login-section{
@@ -15,11 +14,10 @@
 .vertical-center{
   position: relative;
   top: 25%;
-  transform: translateY(-100%);
 }
 
 .old-sec{
-  display: none;
+  transform: translateY(-100%);
 }
 
 .btn-size{

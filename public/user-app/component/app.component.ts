@@ -11,5 +11,7 @@ import {MDL} from '../../mdl-components/MaterialDesignLiteUpgradeElement.ts';
 })
 
 export class AppComponent{
-
+  toggleDisplay(event){
+    document.getElementsByClassName('login-section')[0].className += " old-sec";
+  }
 }
