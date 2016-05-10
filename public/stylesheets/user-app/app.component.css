@@ -3,12 +3,43 @@
   width: 100%;
   color: white;
   overflow: hidden;
-  transition: 2s;
+  transition: 1s;
 }
 
 .login-section{
+  position:absolute;
   z-index: 6;
   background-color: grey;
+}
+
+.about-section{
+  position:absolute;
+  z-index: 5;
+  background-color: green;
+}
+
+.blogs-section{
+  position:absolute;
+  z-index: 4;
+  background-color: red;
+}
+
+.dashboard-section{
+  position:absolute;
+  z-index: 3;
+  background-color: blue;
+}
+
+.create-section{
+  position:absolute;
+  z-index: 2;
+  background-color: yellow;
+}
+
+.welcome-section{
+  position:absolute;
+  z-index: 1;
+  background-color: black;
 }
 
 .vertical-center{

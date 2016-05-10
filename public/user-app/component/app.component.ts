@@ -12,8 +12,4 @@ import {ScrollComponent} from 'user-app/component/scroll.component.ts';
 })
 
 export class AppComponent{
-
-  toggleDisplay(event){
-    document.getElementsByClassName('login-section')[0].className += " old-sec";
-  }
 }
