@@ -1,0 +1,47 @@
+.logo{
+  font-size: 50px;
+  float:left;
+  line-height: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.search{
+  transition: .15s background,.15s color;
+  color: hsla(0,0%,100%,.5);
+  padding-right: 10px;
+  padding-bottom: 2px;
+  padding-left: 39px;
+  background: rgba(0,0,0,.13);
+  font-weight: 400;
+  line-height: inherit;
+  font-size: 15px;
+  height: 34px;
+  width: 90%;
+  border: 0;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+.search_form_field:before {
+    content: "\EA99";
+    transition: .15s color;
+    position: absolute;
+    font-size: 29px;
+    color: inherit;
+    z-index: 2;
+    left: 15px;
+    top: 8px;
+}
+
+.ui_search {
+    color: hsla(0,0%,100%,.5);
+    position: absolute;
+    padding-right: 0;
+    overflow: hidden;
+    height: 54px;
+    width: auto;
+    min-width: 540px;
+    margin: 0;
+    z-index: 999999;
+}
