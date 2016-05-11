@@ -27,6 +27,16 @@
   box-sizing: border-box;
 }
 
+.dot.active{
+  background: #fff;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.dot:hover{
+  opacity: 1;
+}
+
 .login-section{
   position:absolute;
   z-index: 6;
@@ -36,7 +46,7 @@
 .about-section{
   position:absolute;
   z-index: 5;
-  background-color: green;
+  background-color: #56bc8a;
 }
 
 .blogs-section{

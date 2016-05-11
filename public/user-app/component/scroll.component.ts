@@ -9,8 +9,8 @@ export class ScrollComponent{
   public const MAX_COUNT = 5;
   public time : boolean = true;
 
-  private setOldSec(){
-    var classIn = document.getElementsByClassName('active')[0].className;
+  private setOldSec(targetElement){
+    var classIn = targetElement.className;
     var splited : string[] = classIn.split(" ");
     var classOut = "";
 
@@ -21,11 +21,11 @@ export class ScrollComponent{
     }
     classOut += "old-sec";
 
-    return classOut;
+    targetElement.className = classOut;
   }
 
-  private setActive(){
-    var classIn = document.getElementsByClassName('showcase')[this.count].className;
+  private setActive(targetElement){
+    var classIn = targetElement.className;
     var splited : string[] = classIn.split(" ");
     var classOut = "";
 
@@ -36,21 +36,21 @@ export class ScrollComponent{
     }
     classOut += "active";
 
-    return classOut;
+    targetElement.className = classOut;
   }
 
-  private setNormal(){
-    var classIn = document.getElementsByClassName('active')[0].className;
+  private setNormal(targetElement){
+    var classIn = targetElement.className;
     var splited : string[] = classIn.split(" ");
     var classOut = "";
 
     for(var item in splited){
-      if(splited[item] != "active"){
+      if(splited[item] != "active" && splited[item] != ""){
         classOut += splited[item] + " ";
       }
     }
 
-    return classOut;
+    targetElement.className = classOut;
   }
 
   private tickerFunc(){
@@ -66,16 +66,15 @@ export class ScrollComponent{
 
       if(event.deltaY > 0 && this.count != this.MAX_COUNT){
         // mousewheel scroll down
-        document.getElementsByClassName('active')[0].className = this.setOldSec();
+        this.setOldSec(document.getElementsByClassName('active')[0]);
         this.count++;
-        document.getElementsByClassName('showcase')[this.count].className = this.setActive();
-
+        this.setActive(document.getElementsByClassName('showcase')[this.count]);
       }
       else if(event.deltaY < 0 && this.count > 0){
         // mousewheel scroll up
-        document.getElementsByClassName('active')[0].className = this.setNormal();
+        this.setNormal(document.getElementsByClassName('active')[0]);
         this.count--;
-        document.getElementsByClassName('showcase')[this.count].className = this.setActive();
+        this.setActive(document.getElementsByClassName('showcase')[this.count]);
       }
     }
     else{
@@ -91,16 +90,15 @@ export class ScrollComponent{
 
       if(event.keyCode == 40 && this.count != this.MAX_COUNT){
         // mousewheel scroll down
-        document.getElementsByClassName('active')[0].className = this.setOldSec();
+        this.setOldSec(document.getElementsByClassName('active')[0]);
         this.count++;
-        document.getElementsByClassName('showcase')[this.count].className = this.setActive();
-
+        this.setActive(document.getElementsByClassName('showcase')[this.count]);
       }
       else if(event.keyCode == 38 && this.count > 0){
         // mousewheel scroll up
-        document.getElementsByClassName('active')[0].className = this.setNormal();
+        this.setNormal(document.getElementsByClassName('active')[0]);
         this.count--;
-        document.getElementsByClassName('showcase')[this.count].className = this.setActive();
+        this.setActive(document.getElementsByClassName('showcase')[this.count]);
       }
     }
     else{
