@@ -57,52 +57,9 @@ export class ScrollComponent{
     this.time = true;
   }
 
-  @HostListener('window:wheel', ['$event'])
-  track(event) {
-    if(this.time){
-      this.time = false;
+  private update(){
 
-      setTimeout(() => this.tickerFunc(), 1200);
-
-      if(event.deltaY > 0 && this.count != this.MAX_COUNT){
-        // mousewheel scroll down
-        this.setOldSec(document.getElementsByClassName('active')[0]);
-        this.count++;
-        this.setActive(document.getElementsByClassName('showcase')[this.count]);
-      }
-      else if(event.deltaY < 0 && this.count > 0){
-        // mousewheel scroll up
-        this.setNormal(document.getElementsByClassName('active')[0]);
-        this.count--;
-        this.setActive(document.getElementsByClassName('showcase')[this.count]);
-      }
-    }
-    else{
-      return;
-    }
   }
 
-  @HostListener('window:keydown', ['$event'])
-  keyTrack(event) {
-    if(this.time && document.activeElement.tagName == "BODY"){
-      this.time = false;
-      setTimeout(() => this.tickerFunc(), 1200);
-
-      if(event.keyCode == 40 && this.count != this.MAX_COUNT){
-        // mousewheel scroll down
-        this.setOldSec(document.getElementsByClassName('active')[0]);
-        this.count++;
-        this.setActive(document.getElementsByClassName('showcase')[this.count]);
-      }
-      else if(event.keyCode == 38 && this.count > 0){
-        // mousewheel scroll up
-        this.setNormal(document.getElementsByClassName('active')[0]);
-        this.count--;
-        this.setActive(document.getElementsByClassName('showcase')[this.count]);
-      }
-    }
-    else{
-      return;
-    }
-  }
+  
 }
