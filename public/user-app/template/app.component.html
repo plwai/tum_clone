@@ -1,20 +1,110 @@
 <header mdl>
-  <div class="showcase login-section">
-    <center>
-      <div>
-        <h1>tumblr.</h1>
-        Come for what you love<br>
-        Stay for what you discover<br>
-        <div style="width:298px;">
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored btn-size">
-            Get Started
-          </button>
-          <br>
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored btn-size">
-            Log in
-          </button>
-        </div>
+  <div class="showcase login-section active">
+    <center class="vertical-center">
+      <h1>1234</h1>
+      Come for what you love<br>
+      Stay for what you discover<br>
+      <div style="width:298px;">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored btn-size">
+          Get Started
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored btn-size">
+          Log in
+        </button>
+        <a>Here's what's trending</a>
       </div>
     </center>
+    <div class="about-btn">
+      What is Tumblr?
+    </div>
+  </div>
+
+  <div class="showcase about-section">
+    <center class="vertical-center">
+      <h1>About</h1>
+      Come for what you love<br>
+      Stay for what you discover<br>
+      <div style="width:298px;">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored btn-size">
+          Get Started
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored btn-size">
+          Log in
+        </button>
+      </div>
+    </center>
+  </div>
+
+  <div class="showcase blogs-section">
+    <center class="vertical-center">
+      <h1>Blogs</h1>
+      Come for what you love<br>
+      Stay for what you discover<br>
+      <div style="width:298px;">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored btn-size">
+          Get Started
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored btn-size">
+          Log in
+        </button>
+      </div>
+    </center>
+  </div>
+
+  <div class="showcase dashboard-section">
+    <center class="vertical-center">
+      <h1>Dashboard</h1>
+      Come for what you love<br>
+      Stay for what you discover<br>
+      <div style="width:298px;">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored btn-size">
+          Get Started
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored btn-size">
+          Log in
+        </button>
+      </div>
+    </center>
+  </div>
+
+  <div class="showcase create-section">
+    <center class="vertical-center">
+      <h1>Create</h1>
+      Come for what you love<br>
+      Stay for what you discover<br>
+      <div style="width:298px;">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored btn-size">
+          Get Started
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored btn-size">
+          Log in
+        </button>
+      </div>
+    </center>
+  </div>
+
+  <div class="showcase welcome-section">
+    <center class="vertical-center">
+      <h1>Welcome</h1>
+      Come for what you love<br>
+      Stay for what you discover<br>
+      <div style="width:298px;">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored btn-size">
+          Get Started
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored btn-size">
+          Log in
+        </button>
+      </div>
+    </center>
+  </div>
+
+  <div class="showpagination">
+    <div (click)="selectPagination('Login', $event)" class="dot active"></div>
+    <div (click)="selectPagination('About', $event)" class="dot"></div>
+    <div (click)="selectPagination('Blogs', $event)" class="dot"></div>
+    <div (click)="selectPagination('Dashboard', $event)" class="dot"></div>
+    <div (click)="selectPagination('Create', $event)" class="dot"></div>
+    <div (click)="selectPagination('Welcome', $event)" class="dot"></div>
   </div>
 </header>
