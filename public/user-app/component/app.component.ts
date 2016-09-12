@@ -4,6 +4,7 @@ import {Component,
         OnInit,
         HostListener} from 'angular2/core';
 import {MDL} from '../../mdl-components/MaterialDesignLiteUpgradeElement.ts';
+import {SearchComponent} from '../../user-app/component/search.component.ts';
 
 enum Page{
   Login,
@@ -18,7 +19,7 @@ enum Page{
   selector: "my-app",
   templateUrl: "user-app/template/app.component.html",
   styleUrls: ["stylesheets/user-app/app.component.css"],
-  directives: [ MDL ]
+  directives: [ MDL, SearchComponent ]
 })
 
 export class AppComponent{
@@ -141,7 +142,7 @@ export class AppComponent{
 
         this.pageNum--;
         this.targetElement = document.getElementsByClassName('dot')[this.pageNum];
-        
+
         this.setActive(document.getElementsByClassName('showcase')[this.pageNum]);
         this.setActive(this.targetElement);
       }
