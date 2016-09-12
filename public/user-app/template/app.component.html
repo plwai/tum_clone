@@ -6,9 +6,14 @@
       Come for what you love<br>
       Stay for what you discover<br>
       <div style="width:298px;">
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored btn-size">
-          Get Started
-        </button>
+        <div *ngIf="!isSignup">
+          <button (click)="signup()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored btn-size">
+            Get Started
+          </button>
+        </div>
+        <div *ngIf="isSignup">
+          <user-auth></user-auth>
+        </div>
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored btn-size">
           Log in
         </button>

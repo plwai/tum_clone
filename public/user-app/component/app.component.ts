@@ -5,6 +5,7 @@ import {Component,
         HostListener} from 'angular2/core';
 import {MDL} from '../../mdl-components/MaterialDesignLiteUpgradeElement.ts';
 import {SearchComponent} from '../../user-app/component/search.component.ts';
+import {UserComponent} from '../../user-app/component/user.component.ts';
 
 enum Page{
   Login,
@@ -19,7 +20,7 @@ enum Page{
   selector: "my-app",
   templateUrl: "user-app/template/app.component.html",
   styleUrls: ["stylesheets/user-app/app.component.css"],
-  directives: [ MDL, SearchComponent ]
+  directives: [ MDL, SearchComponent, UserComponent]
 })
 
 export class AppComponent{
@@ -29,6 +30,11 @@ export class AppComponent{
   targetElement: string;
   public const MAX_COUNT = 5;
   public time : boolean = true;
+  public isSignup : boolean = false;
+
+  signup(event){
+    this.isSignup = true;
+  }
 
   ngOnInit(){
     this.targetElement = document.getElementsByClassName('dot')[0];

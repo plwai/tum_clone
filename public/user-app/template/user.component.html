@@ -1,0 +1,8 @@
+<form *ngIf="isSignup" (ngSubmit)="onSubmit()" #signup="ngForm">
+  <div class="input-margin">
+    <input type="text" name="name" placeholder="Email" class="mdl-textfield__input">
+    <input type="text" placeholder="Password" class="mdl-textfield__input">
+    <input type="text" placeholder="Username" class="mdl-textfield__input">
+  </div>
+  <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored btn-size">Signup</button>
+</form>
